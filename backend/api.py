@@ -12,3 +12,8 @@ def parse_text():
 
 if __name__ == "__main__":
     app.run(port=5000)
+
+# 添加根路由处理函数
+@app.route('/')
+def home():
+    return jsonify({"status": "running", "version": "1.0.0"})
